@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:3000/api/v1/recipe";
+const API_BASE_URL = "https://recipe-frontend-bz1j.vercel.app/api/v1/recipe";
 
 const api = axios.create({
   baseURL: API_BASE_URL,
