@@ -44,7 +44,7 @@ export const Recipe = () => {
   const findRecipe = recipeData.find((recipe) => recipe.id === id);
 
   if (!findRecipe) {
-    return <h1>Recipe you are looking for, not found!</h1>;
+    return <h1>Loading Recipe...</h1>;
   }
   return (
     <section>
