@@ -26,7 +26,7 @@ const RecipeCard = ({
   return (
     <>
       {recipes.length === 0 ? (
-        <p className="text-xl text-blue-700 py-8">No Recipe Found!</p>
+        <p className="text-xl py-8 font-light">No Recipe Found!</p>
       ) : (
         recipes.map((recipe) => (
           <div
@@ -109,6 +109,11 @@ export const RecipeListingPage = () => {
       <h1 className="text-3xl font-semibold text-zinc-700">All Recipes:</h1>
 
       <div className="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:space-x-6">
+        {!recipeData.length && (
+          <p className="text-xl font-light text-blue-400 py-6">
+            Loading Recipes....
+          </p>
+        )}
         {<RecipeCard recipes={filteredRecipes} setRecipeData={setRecipeData} />}
       </div>
     </div>
